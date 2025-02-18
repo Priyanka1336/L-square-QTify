@@ -1,0 +1,31 @@
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+}
+.toggle {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+.showdata {
+  display: flex;
+  gap: 24px;
+  column-gap: 30px;
+  flex-wrap: wrap;
+}
+.datawrapper {
+  margin-top: 18px;
+  padding: 0px 30px;
+}
+.sectionwrapper {
+  margin-bottom: 50px;
+  .line {
+    margin-bottom: 30px;
+  }
+}
+.line2 {
+  margin-top: 20px;
+}

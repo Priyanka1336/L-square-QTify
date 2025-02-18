@@ -1,0 +1,8 @@
+.leftarrow {
+  position: absolute;
+  cursor: pointer;
+  left: 8px;
+  top: 40%;
+  z-index: 10;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,39 @@
+.input {
+  padding: 10px 16px;
+  width: 40vw !important;
+  background-color: var(--white-color);
+  border-radius: 8px 0px 0px 8px;
+  border: 1px solid black;
+}
+
+.searchicon {
+  padding: 12px 16px 12px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white-color);
+  border-radius: 0px 8px 8px 0px;
+  border: 1px solid black;
+  border-left: 0px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .css-1h51icj-MuiAutocomplete-root
+  .MuiOutlinedInput-root
+  .MuiAutocomplete-input {
+  height: 11px;
+  width: 20vw !important;
+} */
+
+& .MuiAutocomplete-input {
+  height: 11px !important;
+}
