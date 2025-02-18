@@ -1,19 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { useSwiper } from "swiper/react";
 import { ReactComponent as Righticon } from "../../../assets/Righticon.svg";
 import styles from "./Rightarrow.module.css";
 
-const Rightarrow = () => {
-  const swiper = useSwiper();
-  const [isEnd, setIsEnd] = useState(swiper.isEnd);
+const Rightarrow = ({ swiper }) => {
+  const [isEnd, setIsEnd] = useState(swiper?.isEnd);
+
   useEffect(() => {
-    swiper.on("slideChange", () => {
-      setIsEnd(swiper.isEnd);
-    });
-  });
+    if (!swiper) return; // Ensure swiper is defined
+
+    const updateState = () => setIsEnd(swiper.isEnd);
+    swiper.on("slideChange", updateState);
+
+    return () => {
+      swiper.off("slideChange", updateState);
+    };
+  }, [swiper]);
+
   return (
     <div className={styles.rightarrow}>
-      {!isEnd && <Righticon onClick={() => swiper.slideNext()} />}
+      {!isEnd && swiper && <Righticon onClick={() => swiper.slideNext()} />}
     </div>
   );
 };
