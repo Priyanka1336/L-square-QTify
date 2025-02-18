@@ -7,7 +7,7 @@ import "./Navbar.css";
 const Navbar = ({ topAlbums, newAlbums }) => {
   return (
     <nav className="navbar">
-      <Logo />
+      <Logo className="logo" />
       <AutoSearchbar topAlbums={topAlbums} newAlbums={newAlbums} />
       <Button className="button" text={"Give Feedback"} />
     </nav>
