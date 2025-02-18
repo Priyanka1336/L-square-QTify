@@ -44,6 +44,7 @@ function App() {
     try {
       let data = await getSongs();
       setSongs(data);
+      console.log(data);
     } catch (e) {
       console.error(e);
     }

@@ -4,7 +4,12 @@ import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import songContext from "../Context/Songcontext";
 
-export default function Card({ data, type, albumdata, altalbumdata }) {
+export default function Card({
+  data,
+  type,
+  albumdata = [],
+  altalbumdata = [],
+}) {
   let navigate = useNavigate();
   let results = [...albumdata, ...altalbumdata];
   let changeSong = useContext(songContext);
